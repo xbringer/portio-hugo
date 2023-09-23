@@ -33,7 +33,7 @@
 			</div>
 			<h4>Kontor</h4>
 			<p>
-			  {{ .Site.Params.address.address }}
+			  {{ $.Site.Params.address.address }}
 			</p>
 		  </div>
 		</div>
@@ -52,8 +52,8 @@
 			  </div>
 			</div>
 			<h4>Telefon & Email</h4>
-			<p>{{ .Site.Params.address.phone }}<br>
-			  <a href="mailto:{{ .Site.Params.address.email }}">{{ .Site.Params.address.email }}</a>
+			<p>{{ $.Site.Params.address.phone }}<br>
+			  <a href="mailto:{{ .Site.Params.address.email }}">{{ $.Site.Params.address.email }}</a>
 			</p>
   
 		  </div>
@@ -74,7 +74,7 @@
 			</div>
 			<h4>Öppetider</h4>
 			<p>
-			  {{ .Site.Params.address.openingHours }}
+			  {{ $.Site.Params.address.openingHours }}
 			</p>
 		  </div>
 		</div>
@@ -154,8 +154,7 @@
 		  </div>
 		</div>
 		<div class="col-lg-6">
-		  {{ $map := .Site.Params.map }}
-		  <div id="map" data-lat={{ $map.latitude }} data-long={{ $map.longitude }} data-pin={{ $map.pinImage | absURL }}>
+		  <div id="map" data-lat={{ .Site.Params.map.latitude }} data-long={{ .Site.Params.map.longitude }} data-pin={{ .Site.Params.map.pinImage | absURL }}>
 		  </div>
 		</div>
 	  </div>
