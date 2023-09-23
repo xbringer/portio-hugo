@@ -53,7 +53,7 @@
 			</div>
 			<h4>Telefon & Email</h4>
 			<p>{{ $.Site.Params.address.phone }}<br>
-			  <a href="mailto:{{ .Site.Params.address.email }}">{{ $.Site.Params.address.email }}</a>
+			  <a href="mailto:{{ $.Site.Params.address.email }}">{{ $.Site.Params.address.email }}</a>
 			</p>
   
 		  </div>
@@ -90,7 +90,7 @@
 			<h3>Kontaktformulär</h3>
 		  </div>
 		  <div class="contact-form-input">
-			<form id="contact-form" action="{{ .Site.Params.fabformURL }}" method="POST">
+			<form id="contact-form" action="{{ $.Site.Params.fabformURL }}" method="POST">
   
 			  <div class="form-row">
   
@@ -154,7 +154,7 @@
 		  </div>
 		</div>
 		<div class="col-lg-6">
-		  <div id="map" data-lat={{ .Site.Params.map.latitude }} data-long={{ .Site.Params.map.longitude }} data-pin={{ .Site.Params.map.pinImage | absURL }}>
+		  <div id="map" data-lat={{ $.Site.Params.map.latitude }} data-long={{ $.Site.Params.map.longitude }} data-pin={{ $.Site.Params.map.pinImage | absURL }}>
 		  </div>
 		</div>
 	  </div>
