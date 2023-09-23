@@ -1,4 +1,8 @@
 {{ with .Site.Data.blogSection }}
+{{ with .Site.Params.address }}
+{{ with .Site.Params.map }}
+{{ $address := .Site.Params.address }}
+{{ $map := .Site.Params.map }}
 {{ if .enable }}
 <section class="section blog-preview" id="blog">
 	<div class="blog-preview__shape">
@@ -14,7 +18,6 @@
 			</div>
 		</div>
 </section>
-{{ $address := .Site.Params.address }}
 <section class="section contact__info">
 	<div class="container">
 	  <div class="row">
@@ -159,7 +162,6 @@
 		  </div>
 		</div>
 		<div class="col-lg-6">
-		  {{ $map := .Site.Params.map }}
 		  <div id="map" data-lat={{ $map.latitude }} data-long={{ $map.longitude }} data-pin={{ $map.pinImage | absURL }}>
 		  </div>
 		</div>
