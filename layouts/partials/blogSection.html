@@ -10,6 +10,13 @@
 				<div class="blog-preview__header">
 					<span class="top-title pre-line">{{ .topTitle }}</span>
 					{{ .title | markdownify }}
+					<ul class="unstyle-list">
+						{{ range $.Site.Params.social }}
+						<li class="d-inline-block mx-2"></li><a class="text-dark" target="_blank" href="{{ .url }}"><i
+							  class="fa {{ .icon }} fa-3x"></i></a>
+						</li>
+						{{ end }}
+					</ul>  
 				</div>
 			</div>
 		</div>
