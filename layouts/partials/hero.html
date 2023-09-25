@@ -30,15 +30,15 @@
           <div class="mb-5">
             <span class="top-title pre-line">{{ .topTitle }}</span>
             {{ .content | markdownify }}
+            <ul class="unstyle-list">
+              {{ range $.Site.Params.social }}
+              <a class="text-dark" target="_blank" href="{{ .url }}"><i
+                    class="fa {{ .icon }} fa-4x"></i></a>
+              {{ end }}
+            </ul>  
           </div>
           <a type="button" class="btn btn-lg btn-primary btn-zoom"
             href="{{ .buttonURL | absURL }}">{{ .buttonName }}</a>
-          <ul class="unstyle-list">
-            {{ range $.Site.Params.social }}
-            <a class="text-dark" target="_blank" href="{{ .url }}"><i
-                  class="fa {{ .icon }}" fa-4x></i></a>
-            {{ end }}
-          </ul>  
         </div>
       </div>
       <div class="col-lg-6">
