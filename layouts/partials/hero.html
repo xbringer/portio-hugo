@@ -32,8 +32,9 @@
             {{ .content | markdownify }}
             <ul class="unstyle-list">
               {{ range $.Site.Params.social }}
-              <a class="text-dark" target="_blank" href="{{ .url }}"><i
-                    class="fa {{ .icon }} fa-4x"></i></a>
+              <li class="d-inline-block mx-2"></li><a class="text-dark" target="_blank" href="{{ .url }}"><i
+                    class="fa {{ .icon }} fa-3x"></i></a>
+              </li>
               {{ end }}
             </ul>  
           </div>
