@@ -2,13 +2,14 @@
 {{ if .enable }}
 <section class="section portfolio" id="portfolio">
   <div class="container">
+    <div class="service__background_pattern">
+      <img src="{{ .image | absURL }}" alt="background-pattern">
+    </div>
     <div class="row text-center">
       <div class="col-lg-6">
         <div class="portfolio__header mb-5">
-          <p style="background-image: url('{{ .image | absURL }}'); background-repeat: no-repeat;">
             <span class="top-title">{{ .topTitle }}</span>
             {{ .title | markdownify }}
-          </p>  
         </div>
       </div>
     </div>
