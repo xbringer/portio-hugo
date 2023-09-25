@@ -2,14 +2,14 @@
 {{ if .enable }}
 <section class="section portfolio" id="portfolio">
   <div class="container">
-    <div class="service__background_pattern">
-      <img src="{{ .image | absURL }}" alt="background-pattern">
-    </div>
     <div class="row text-center">
       <div class="col-lg-6">
         <div class="portfolio__header mb-5">
-            <span class="top-title">{{ .topTitle }}</span>
-            {{ .title | markdownify }}
+          <div class="service__background_pattern">
+            <img src="{{ .image | absURL }}" alt="background-pattern">
+          </div>
+          <span class="top-title">{{ .topTitle }}</span>
+          {{ .title | markdownify }}
         </div>
       </div>
     </div>
