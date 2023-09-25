@@ -41,13 +41,23 @@
                         <span class="top-title pre-line">{{ .topTitle }}</span>
                         {{ .content | markdownify }}
                     </div>
-                    {{ $section := .skill }}
-                    {{ range $section }}
-                    <div class="skill__progress_item">
-                        <span class="d-inline-block text-dark"> {{ .title }} </span>
-                        <img src="images/skill/maria-akerberg-logga.jpg" alt="maria-img">
-                    </div>
-                    {{ end }}
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="skill__progress_item">
+                    <span class="d-inline-block text-dark">Maria Åkerberg</span>
+                    <a href="https://www.mariaakerberg.com/"><img src="images/skill/maria-akerberg-logga.jpg" alt="maria-img"></a>
+                    <span class="d-inline-block text-dark">Svensk ekologisk hudvård</span>
+                </div>
+                <div class="skill__progress_item">
+                    <span class="d-inline-block text-dark">Funqwear</span>
+                    <a href="https://funqwear.se/"><img src="images/skill/funqwear-logga.jpg" alt="funqwear-img"></a>
+                    <span class="d-inline-block text-dark">Sköna och snygga stödstrumpor</span>
+                </div>
+                <div class="skill__progress_item">
+                    <span class="d-inline-block text-dark">pedag International</span>
+                    <a href="https://www.pedag.com/de/en/"><img src="images/skill/pedag-logga.jpg" alt="pedag-img"></a>
+                    <span class="d-inline-block text-dark">Sulor av hög kvalitet</span>
                 </div>
             </div>
         </div>
