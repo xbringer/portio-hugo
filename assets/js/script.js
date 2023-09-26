@@ -90,8 +90,8 @@ $(document).ready(function () {
     infinite: false,
     slidesToShow: 2,
     slidesToScroll: 2,
-    dots: false,
-    arrows: true,
+    dots: true,
+    arrows: false,
     responsive: [
       {
         breakpoint: 992,
@@ -145,7 +145,7 @@ $(document).ready(function () {
     dots: true,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 992,
