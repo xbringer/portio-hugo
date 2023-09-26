@@ -88,10 +88,10 @@ $(document).ready(function () {
   // service slider
   $(".service__slider").slick({
     infinite: false,
-    slidesToShow: 4,
+    slidesToShow: 2,
     slidesToScroll: 0,
     dots: false,
-    arrows: false,
+    arrows: true,
     responsive: [
       {
         breakpoint: 992,
