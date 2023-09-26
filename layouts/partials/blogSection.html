@@ -122,7 +122,7 @@
 			</div>
 			<h4>Öppetider</h4>
 			<p>
-			  {{ $.Site.Params.address.openingHours }}
+			  {{ $.Site.Params.address.openingHours | markdownify }}
 			</p>
 		  </div>
 		</div>
