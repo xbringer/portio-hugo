@@ -89,9 +89,9 @@ $(document).ready(function () {
   $(".service__slider").slick({
     infinite: false,
     slidesToShow: 2,
-    slidesToScroll: 0,
-    dots: false,
-    arrows: true,
+    slidesToScroll: 2,
+    dots: true,
+    arrows: false,
     responsive: [
       {
         breakpoint: 992,
@@ -145,7 +145,7 @@ $(document).ready(function () {
     dots: true,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 992,
