@@ -1,5 +1,28 @@
 {{ with .Site.Data.blogSection }}
 {{ if .enable }}
+<section class="contact-form">
+	<div class="container">
+	  <div class="row">
+		<div class="col-lg-6">
+			<div class="blog-preview__header">
+				<span class="top-title pre-line">{{ .topTitle }}</span>
+				{{ .title | markdownify }}
+				<ul class="unstyle-list">
+					{{ range $.Site.Params.social }}
+					<li class="d-inline-block mx-2"></li><a class="text-dark" target="_blank" href="{{ .url }}"><i
+							class="fa {{ .icon }} fa-3x"></i></a>
+					</li>
+					{{ end }}
+				</ul>  
+			</div>
+		</div>
+		<div class="col-lg-6">
+		  <div id="map" data-lat={{ $.Site.Params.map.latitude }} data-long={{ $.Site.Params.map.longitude }} data-pin={{ $.Site.Params.map.pinImage | absURL }}>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
 <section class="section blog-preview" id="blog">
 	<div class="blog-preview__shape">
 		<img src="images/blog/blog-shape.svg" alt="blog shape" />
@@ -101,30 +124,6 @@
 			<p>
 			  {{ $.Site.Params.address.openingHours }}
 			</p>
-		  </div>
-		</div>
-	  </div>
-	</div>
-  </section>
-  
-  <section class="contact-form">
-	<div class="container">
-	  <div class="row">
-		<div class="col-lg-6">
-			<div class="blog-preview__header">
-				<span class="top-title pre-line">{{ .topTitle }}</span>
-				{{ .title | markdownify }}
-				<ul class="unstyle-list">
-					{{ range $.Site.Params.social }}
-					<li class="d-inline-block mx-2"></li><a class="text-dark" target="_blank" href="{{ .url }}"><i
-							class="fa {{ .icon }} fa-3x"></i></a>
-					</li>
-					{{ end }}
-				</ul>  
-			</div>
-		</div>
-		<div class="col-lg-6">
-		  <div id="map" data-lat={{ $.Site.Params.map.latitude }} data-long={{ $.Site.Params.map.longitude }} data-pin={{ $.Site.Params.map.pinImage | absURL }}>
 		  </div>
 		</div>
 	  </div>
