@@ -417,12 +417,6 @@ function initialize() {
   };
 
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
-  // SET THE MAP TYPE
-  var mapType = new google.maps.StyledMapType(style, {
-    name: "Grayscale",
-  });
-  map.mapTypes.set("grey", mapType);
-  map.setMapTypeId("grey");
   //CREATE A CUSTOM PIN ICON
   var marker_image = $("#map").data("pin");
   var pinIcon = new google.maps.MarkerImage(
@@ -436,7 +430,7 @@ function initialize() {
     position: mapCenter,
     map: map,
     icon: pinIcon,
-    title: "bizcred",
+    title: "Kärra Fotvård",
   });
 }
 
